@@ -61,3 +61,35 @@ function draw() {
         peta.monster.push(mon)
       }
     }
+  }
+  class Level{ // Class Level
+  constructor(currentLevel, latestLevel, maxLevel) {
+    this.currentLevel = currentLevel;
+    this.latestLevel = latestLevel;
+    this.maxLevel = maxLevel;
+  }
+  setLevel(level){
+    this.currentLevel = level;
+  }
+
+  getCurentLevel(){
+    return this.currentLevel;
+  }
+
+  setLatestLevel(level){
+    this.latestLevel = level;
+  }
+
+  getlatesttLevel(){
+    return this.latestLevel;
+  }
+  increaselevel(){
+    this.currentLevel++;
+  }
+
+  checkLevel(){ // Jika level lebih dari 5, akan diubah menjadi tetap 5
+    if(this.currentLevel > this.maxLevel){
+        this.currentLevel = 5;
+    }
+  }
+}
